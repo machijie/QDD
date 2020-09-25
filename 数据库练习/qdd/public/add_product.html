@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function add(){
+				var obj={
+					_ic:ic.value,
+					_ra:ra.value,
+					_ro:ro.value,
+					_cp:cp.value,
+					_ti:ti.value,
+					_pr:pr.value,
+					_de:de.value,
+					_nu:nu.value,
+					_lo:lo.value,
+					_mp:mp.value,
+					_xl:xl.value
+				}
+				for(var k in obj){
+					if(!obj[k]){
+						d1.innerHTML="数据不能为空";
+						return;
+					}
+				}
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					console.log(xhr.readyState)
+					if(xhr.readyState==4 && xhr.status==200){
+						var res=xhr.responseText;
+						if(res==0){
+							d1.innerHTML="数据添加失败"
+						}else{
+							d1.innerHTML="数据添加成功，3秒后跳转到产品详情页";
+							setTimeout(function(){
+								location.href="/select_product.html"
+							},3000)
+						}
+					}
+				}
+				var formdata=`inch=${obj._ic}&ram=${obj._ra}&rom=${obj._ro}&cpu=${obj._cp}&title=${obj._ti}&price=${obj._pr}&detail=${obj._de}&num=${obj._nu}&logo=${obj._lo}&mp=${obj._mp}&xl=${obj._xl}`;
+				xhr.open("post","/product/insert",true);
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				xhr.send(formdata);
+			}
+		</script>
+	</head>
+	<body>
+		<h2>添加商品</h2>
+		产品英寸：<input type="text" id="ic"><br>
+		产品内存：<input type="text" id="ra"><br>
+		产品外存：<input type="text" id="ro"><br>
+		产品cpu：<input type="text" id="cp"><br>
+		产品标题：<input type="text" id="ti"><br>
+		产品价格：<input type="text" id="pr"><br>
+		产品详情：<input type="text" id="de"><br>
+		产品数量：<input type="text" id="nu"><br>
+		产品品牌：<input type="text" id="lo"><br>
+		产品图片：<input type="text" id="mp"><br>
+		产品销量：<input type="text" id="xl"><br>
+		<button id="btn" onclick="add()">提交</button>
+		<div id="d1"></div>
+	</body>
+</html>

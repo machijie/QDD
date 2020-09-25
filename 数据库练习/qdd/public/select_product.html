@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function select(){
+				var str=`<table border="1" style="text-align:center;margin:0 auto;">
+				           <tr>
+				             <th>编号</th>
+										 <th>英寸</th>
+										 <th>内存</th>
+										 <th>外存</th>
+										 <th>处理器</th>
+										 <th>标题</th>
+										 <th>价格</th>
+										 <th>库存</th>
+										 <th>品牌</th>
+										 <th>销量</th>
+										 <th>操作</th>
+								   </tr>`;
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					//console.log(xhr.readyState)
+					if(xhr.readyState==4 && xhr.status==200){
+						var res=xhr.responseText;
+						var obj=JSON.parse(res);
+						if(res==0){
+							d1.innerHTML="查询失败"
+						}else{
+							for(var i=0;i<obj.length;i++){
+								str+=`
+								  <tr>
+									  <td>${obj[i].pid}</td>
+									  <td>${obj[i].inch}</td>
+										<td>${obj[i].ram}</td>
+										<td>${obj[i].rom}</td>
+										<td>${obj[i].cpu}</td>
+										<td>${obj[i].title}</td>
+										<td>${obj[i].price}</td>
+										<td>${obj[i].num}</td>
+										<td>${obj[i].logo}</td>
+										<td>${obj[i].xl}</td>
+										<td><a href="update_product.html?pid=${obj[i].pid}">修改</a><a href="#" onclick="del(${obj[i].pid})">删除</a></td>
+									</tr>
+								`
+							};
+							str+=`</table>`
+							d1.innerHTML=str;
+						}
+					}
+				};
+				xhr.open("get","/product/select",true);
+				xhr.send();
+			}
+			
+			function del(pid){
+				//console.log(pid)
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+				  //console.log(xhr.readyState)
+					if(xhr.readyState==4 && xhr.status==200){
+						var res=xhr.responseText;
+						if(res==0){
+							alert("删除失败")
+						}else{
+							alert("删除成功");
+							select();
+						}
+					}
+				};
+				xhr.open("delete","/product/del/"+pid,true);
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body onload="select()">
+		<h2 style="text-align: center;">商品查询</h2>
+		<div id="d1"></div>
+	</body>
+</html>

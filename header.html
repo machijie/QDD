@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{padding:0;margin:0;font-size: 12px;}
+			li,ol,ul{list-style: none;}
+			header{margin:0 auto;}
+			.top_nav{background-color: #f5f5f5;height:30px;line-height: 27px;color:#777;position: relative;z-index:103}
+			@media screen and (min-width:1441px){
+				.head-inner{
+					width:1170px;
+				}
+			}
+			.head-inner{margin:0 auto;position:relative;clear: both;}
+			.c-h-area{display: inline-block;position: relative;z-index: 10;vertical-align: top;color: #333;}
+			
+			.c-h-area-header{position:relative;z-index:1;padding-left: 15px;padding-right: 23px;width: 46px;height: 27px;cursor: pointer;border-width: 1px 1px 0;border-style: solid;border-color:transparent;}
+			.c-h-area-title{display: block;line-height: 27px;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+			.c-h-area-triangle{position: absolute;top:10px;right:-15px; display: inline-block;width:0;height:0;border-width:4px;border-color:#999 transparent transparent transparent;border-style: solid dashed dotted dashed; vertical-align: top;}
+			
+			.c-h-area-body{position: absolute;top: 28px;left: 0;padding-right: 15px;padding-left: 15px;width: 470px;background-color: #fff;border: 1px solid #ccc;}
+			.c-h-area-body{display: none;}
+			.c-h-area-explain{padding:7px 0;}
+			.c-h-area-tab-header{height: 29px;}
+			.c-h-area-tab-body{padding:20px 13px 18px;border-top: 1px solid #ccc;}
+			.is-h-area-tab-title-item-current{
+				position: relative;z-index: 2;font-weight: 700;background-color: #fff;
+			}
+			.c-h-area-tab-title-item{
+				display: inline;float: left;margin-left: -1px;width:68px;text-align: center;cursor: pointer;line-height: 28px;vertical-align: top;border: 1px solid #ccc;
+			}
+			.c-h-area-list-province{width:408px;}
+			.c-h-area-list-province .c-h-area-item{width:68px;}
+			.c-h-area-item{float:left;margin-bottom: 2px;}
+			.c-h-area-list-province .c-h-area-link{max-width: 46px;}
+			.c-h-area-link{text-decoration: none;vertical-align: top;display: inline-block;padding:10px 0;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;line-height: 20px;border: 1px solid #fff;outline:0;color#333;}
+			.c-h-area-icon-close{position:absolute;top: 14px;right:14px;color:#8b8b8b;font-size: 12px;line-height: 1;text-decoration: none;}
+			
+			/* 请登录 */
+			.top-nav-tool{float:right;}
+			.top-nav-tool li{float:left;}
+			
+			.top-nav-tool li a{color:#666;text-decoration: none;}
+			.top-nav-tool li a:hover{color:#FA2A83;}
+			
+			.top-nav-tool .nav_login{width:353px;height:194px;border:1px solid #ccc;display: none;}
+			.top-nav-tool li:first-child{border:1px solid transparent;}
+			.top-nav-tool li:first-child>a{position: relative;}
+			.top-nav-tool li:first-child .nav_login{position: absolute;}
+			.top-nav-tool li:first-child:hover{border-color:#ccc;border-bottom: 0;background-color: #fff;}
+			.top-nav-tool li:first-child>a:hover{z-index:10;}
+			.top-nav-tool li:first-child:hover .nav_login{display: block;margin-top: -3px;margin-left: -1px;background-color: #fff;border-top:#fff;}
+		</style>
+		<script>
+			function show(){
+				var jhdc=document.querySelector(".c-h-area-header");
+				jhdc.style.borderColor="#ccc";
+				jhdc.style.borderBottom="0";
+				jhdc.style.backgroundColor="#fff";
+				var jhac=document.getElementById("j_header_area_content");
+				jhac.style.display="block";
+				jhac.style.marginTop="-1px";
+			}
+		</script>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div class="top_nav">
+				  <div id="j_top_nav" class="head-inner">
+						<div id="j_head_address_container" class="c-h-area" onclick="show()">
+							<div class="c-h-area-header" id mars_head="home_header_location">
+								<div class="c-h-area-title" id="j_header_selected_html" data-flag="province" data-id="0">上海市</div>
+								<div class="c-h-area-triangle"></div>
+							</div>
+							<div class="c-h-area-body" id="j_header_area_content">
+								<p class="c-h-area-explain">请选择你所在的收货地区</p>
+								<div class="c-h-area-tab">
+									<div class="c-h-area-tab-header">
+										<ul class="c-h-area-tab-title">
+											<li id="j_head_tab_province" class="j_header_address_tab c-h-area-tab-title-item is-h-area-tab-title-item-current" data-flag="province">省份</li>
+										</ul>
+									</div>
+									<div class="c-h-area-tab-body">
+										<ul id="j_header_city_container" class="c-h-area-list c-h-area-list-province">
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">内蒙古自治区</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+											<li class="c-h-area-item"><a href="" class="c-h-area-link">北京市</a></li>
+										</ul>
+									</div>
+								</div>
+								<a href="" id="j_header_area_close" class="c-h-area-icon-close">×</a>
+							</div>
+						</div>
+						<ul class="top-nav-tool" id="j-topNavTool">
+							<li>
+								<a href="">请登录&nbsp;&nbsp;&nbsp;/</a>
+								<div class="nav_login">
+									<img src="img/2020-09-24_130920.png" alt="">
+									<span><a href="">您好！[请登录]</a></span><hr color="#ccc" size="0.5">
+								</div>
+							</li>						
+							<li><a href="">&nbsp;&nbsp;&nbsp;注册</a></li>
+							<li>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="">签到有礼&nbsp;&nbsp;&nbsp;</a></li>
+							<li>&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;<a href="">我的订单&nbsp;&nbsp;&nbsp;</a></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				
+				
+			</nav>
+			<div class="head_logo">
+				
+			</div>
+			<nav class="main_nav">
+				
+			</nav>
+		</header>
+	</body>
+</html>
