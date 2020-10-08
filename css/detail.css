@@ -1,0 +1,364 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 顶部左侧样式 */
+.top{
+	width: 1000px;
+	height: 546px;
+	font-size: 12px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	
+}
+.top_left{
+	flex: 0 0 42%;
+}
+.top_right{
+	flex: 0 0 55%;	
+}
+.img_big img{
+	width: 100%;
+}
+
+.img_big{
+	overflow: hidden;
+}
+
+.img_big img:hover{
+	transform: scale(2.5); 
+	transition: 2s;
+} 
+
+.img_small{
+	display: flex;
+	justify-content: left;
+}
+.img_small div{
+	width: 62px;
+	height: 62px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.img_small>div:first-child{
+	margin-left: 1px;
+}
+
+.img_small>div:first-child ~ div{
+	margin-left: 10px;
+}
+.img_small img{
+	width: 62px;
+	height: 62px;
+} 
+.img_small div:hover{
+/* 	transform: translate(1px,1px); */
+	border: 1px solid red;
+ 	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: -1px; 
+}
+.img_small>div:first-child ~ div:hover{
+	margin-left: 9px;
+}
+.img_small>div:first-child:hover{
+	margin-left: 0px;
+} 
+/* 顶部左侧样式 */
+.top_right a{
+	text-decoration: none;
+}
+.brand{
+	font-size: 16px;
+	font-family:"微软雅黑";
+	color: #007cff;
+}
+.title{
+	font-size: 16px;
+	font-family:"微软雅黑";
+	color: #333;
+	font-weight: bold;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.price{
+	height: 94px;
+	background: url(../img/public_img/detail_price_bg.png) no-repeat ;
+	background-size: cover;
+	color: white;
+	line-height: 94px;
+    font-size: 16px;
+}
+.price>span:first-child{
+	font-size: 24px;
+	margin-left: 20px;
+}
+.price>span:nth-child(2){
+	font-size: 38px;
+	margin-right: 10px;
+}
+.price>span:nth-child(3){
+	text-decoration: line-through;
+	margin-right: 10px;
+}
+.price img{
+	margin-left: 186px;
+	margin-top: 20px;
+}
+.col,.size,.freight,.num{
+	width:550px;
+	height: 32px;
+	display: flex;
+	margin-top: 14px;
+
+}
+.name{
+	color: #999;
+	width:40px ;
+	height: 32px;
+	line-height: 32px;
+}
+.freight>span:nth-child(2){
+	height: 32px;
+	line-height: 32px;
+}
+
+.col>a,.size>a{
+	width:81px;
+	height: 32px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 32px;
+	color: #333;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+}
+
+.num_input{
+	border: 1px solid #ccc;
+	display: flex;
+	justify-content: center;
+}
+.num_input a{
+	width: 22px;
+	height: 30px;
+	color:#dad8d8 ;
+	font-size: 22px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #F9F8F8;
+}
+.num_input>a:first-child{
+	border-right: 1px solid #ccc ;
+}
+.num_input>a:nth-child(3){
+	border-left: 1px solid #ccc;
+}
+
+.num input{
+	width: 32px;
+	height: 28px;
+	text-align: center;
+	outline: 0;
+	border: 0;
+}
+/* 按钮 */
+.btn{
+	margin-top: 20px;
+}
+.btn a{
+	display: inline-block;
+	width: 139px;
+	height: 44px;
+	font-size:12px;
+	color: white;
+	background-color: #f43499;
+}
+.btn a:first-child{
+border-top-left-radius: 3px;
+border-bottom-left-radius: 3px;
+}
+
+.btn a:nth-child(2){
+background-color: red;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+}
+
+
+.btn a span:first-child{
+	display: block;
+	font-size: 20px;
+	text-align: center;
+}
+.btn a span:nth-child(2){
+	display: block;
+	font-size: 14px;
+	text-align: center;
+	
+}
+.chengnuo{
+	margin-top: 40px;
+}
+/* 颜色规格鼠标悬停效果 */
+.col a:hover,.size a:hover{
+	border: 1px solid #f10180;
+}
+/* 颜色规格鼠标点击效果 */
+.col a:focus,.size a:focus{
+	border: 2px solid #f10180;
+	width: 79px;
+	height:30px;
+	
+}
+
+/* 数量增减标悬停效果 */
+.num_input a:hover{
+		color:#666666 ;
+}
+
+
+
+/* 详情样式 */
+.detail_nav {
+	width: 1000px;
+	height: 40px;
+	border: 1px solid #e7e7e7;
+	background: #fff;
+	font-size: 14px;
+	margin: 0 auto;
+	border-bottom: 3px solid #000;
+}
+
+.detail_nav>ul {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+
+.detail_nav>ul>li {
+	flex: 0 0 10%;
+	line-height: 40px;
+	list-style-type: none;
+	border-right: 1px solid #e7e7e7;
+	border-bottom: 3px solid #000;
+	text-align: center;
+}
+
+.detail_nav>ul>li>a {
+	text-decoration: none;
+	color: #333;
+}
+
+.detail_nav>ul>li:first-child {
+	border-bottom: 3px solid #f10180;
+}
+
+.detail_nav>ul>li:first-child>a {
+	color: #F10180;
+}
+
+.detail_nav>ul>li:hover {
+	border-bottom: 3px solid #f10180;
+}
+
+.detail_nav>ul>li>a:hover {
+	color: #F10180;
+}
+
+/* 商品参数 */
+.detail {
+	width: 1000px;
+	height: 37px;
+	margin: 20px auto;
+}
+
+.img1 {
+	width: 13px;
+	height: 13px;
+	background: url(img/detail-sprites.png) no-repeat -275px -233px;
+	margin-top: 10px;
+}
+
+.detail>div:first-child,
+.image>div:first-child {
+	display: flex;
+	justify-content: left;
+}
+
+.detail>div:nth-child(2),
+.image>div:nth-child(2) {
+	width: 1000px;
+	height: 7px;
+	background-image: url(img/detial_line-xiegang.png);
+	margin-top: 5px;
+}
+
+.c1 {
+	font-size: 20px;
+	color: #F10180;
+	margin-left: 8px;
+	font-family: "微软雅黑";
+}
+
+.c2 {
+	font-size: 20px;
+	margin-left: 9px;
+	color: #999;
+	font-family: "微软雅黑";
+}
+
+/* 商品参数表格样式 */
+.detail_tab {
+	width: 1000px;
+	height: 180px;
+	font-size: 14px;
+	border-color: #f5f5f5;
+	border-top: 1px solid #ededed;
+	border-bottom: 1px solid #ededed;
+	border-left: 1px solid #ededed;
+	margin-top: 20px;
+
+}
+
+.detail_tab th {
+	width: 150px;
+	height: 42px;
+	text-align: right;
+	color: #666;
+	background-color: #f5f5f5;
+	border-right: 1px solid #ededed;
+
+}
+
+.detail_tab td {
+	width: 350px;
+	height: 42px;
+	text-align: left;
+	color: #999;
+	border-bottom: 1px solid #ededed;
+	padding-left: 15px;
+	border-right: 1px solid #ededed;
+}
+
+.image {
+	margin-top: 15px;
+}
+
+.imgs>img {
+	width: 1000px;
+}
+
+#aboutAs>div:first-child {
+	width: 1000px;
+	background-color: #eae8eb;
+	font-size: 0.875rem;
+	line-height: 40px;
+	color: #333;
+}
+
+#aboutAs ul {
+	list-style: none;
+}
