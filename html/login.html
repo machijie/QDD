@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>钱多多登录</title>
+		<link rel="stylesheet" href="../css/login.css">
+		<script src="../js/login.js" type="text/javascript" charset="utf-8"></script> 
+	</head>
+	<body>
+		<div class="login">
+			<!-- 顶部 -->
+			<div id="header">
+				<div><img src="../img/login_img/qddlogo.png" alt=""></div>
+				<div><img src="../img/login_img/header_right.png" alt=""></div>
+			</div>
+			<!-- 中间 -->
+			<div class="bg_img">
+				<div>
+					<div class="login_container">
+						<div>账户登录</div>
+						<div id="uname_upwd_false"></div>
+						<div class="uname ">
+						<img src="../img/login_img/uname.png"><input type="text" id="uname" onblur="check_uname()" placeholder="手机号/用户名/邮箱">
+						</div>
+						<div id="uname_false"></div>
+						<div class="pwd"><img src="../img/login_img/pwd.png"><input type="password" id="upwd" onblur="check_upwd()" placeholder="密码"></div>
+						<div id="upwd_false"></div>
+						<div class="forget_pwd"><a href="">忘记密码</a></div>
+						<div class="btn"><a href="#" onclick="login()">登录</a></div>
+						<div class="reg"><a href="#">免费注册</a></div>
+					</div>
+				</div>
+			</div>
+			<!-- 底部 -->
+			<div>
+				<p class="foot">Copyright 2008-2020 vip.com，All Rights Reserved ICP证：沪 B2-20110329</p>
+			</div>
+
+		</div>
+
+
+	</body>
+</html>
