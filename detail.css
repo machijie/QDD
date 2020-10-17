@@ -1,0 +1,42 @@
+a{color:#999;text-decoration: none;}
+a:hover{color:#F10180}
+div.detail{
+	width:1000px;
+	margin:0 auto;
+}
+div.left_image,div.right_detail{
+	float:left;
+}
+button.left_btn,button.right_btn{
+	width:32px;height:75px;
+	border:0;
+	background-color: #ccc;
+	color:#fff;
+	font-size: 30px;
+	outline: 0;
+}
+button.left_btn{float:left;}
+button.left_btn:hover,button.right_btn:hover{
+	background-color:#999;
+}
+.smallimg div{margin:0 auto;float:left;display:flex;justify-content: space-around;width:454px;}
+.smallimg div img{border:1px solid #F2F2F2}
+.smallimg div img:hover{border-color: #F10180;}
+.smallimg::after{
+	display:table;
+	content:"";
+	clear:both;
+}
+.encode{color:#999;margin-top:16px;padding-bottom:16px;font-size: 13px;border-bottom: 1px dotted #ccc;}
+.encode img{vertical-align: bottom;}
+.encode div{width:112px;height:24px;float:right;color:#000;border:1px solid #ccc; border-radius:2px;cursor:pointer;background: url(img/2020-10-17_162409.png) no-repeat left center;text-align: center;background-color: #FAFAFA;position:relative;}
+.encode div span:first-child{display:inline-block;margin-top:4px;}
+.encode div span:last-child{display:inline-block;width:0px;height:0px;border:3px solid transparent;border-top-color:#aaa;}
+.encode div:hover{background-color: #FFFFFF;}
+.encode div div{width:135px;height:30px;display:none;border:1px solid #ccc;padding:3px;position:absolute;top:22px;left:-1px;}
+.encode div:hover div{display:block;}
+
+
+
+
+.right_btn{float:right;}
