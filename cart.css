@@ -1,0 +1,145 @@
+*{
+	font-size: 14px;
+	color:#C3C3C3;
+	padding:0;margin:0;
+}
+header>div::after{
+	content:"";
+	display:block;
+	clear:both;
+	text-align: center;
+}
+header{
+	width:100%;
+	padding-bottom: 10px;
+	border-bottom:2px solid #F3168A;
+}
+header>div{
+	width:960px;
+	margin:0 auto;
+}
+div.cartpackage{float:left;}
+div.right-header{
+	float:right;
+}
+div.right-header a{
+	text-decoration: none;
+}
+div.right-header img{
+	vertical-align: middle;
+}
+.right-header div{text-align:right;}
+.right-header div span{color:#000;}
+
+
+
+section{
+	margin-top: 30px;
+}
+section div{
+	margin:0 auto;
+	text-align: center;
+	width:960px;
+	
+}
+section div:first-child{
+	border-bottom: 1px solid #c3c3c3;
+}
+section>div>span{
+	font-size: 20px;
+	color:#F3168A;
+	border-bottom: 3px solid #F3168A;
+}
+p.peisong{
+	text-align: left;
+	margin:20px auto;
+	color: #000000;
+}
+p.peisong span{border:0;font-size: 20px;color: #000000;}
+p.peisong b{font-size: 20px;font-weight: bold;color: #000000;}
+section table{
+	margin:0 auto;
+	width:960px;
+	border: 1px solid #c3c3c3;
+	color:#000;
+	border-collapse: collapse;
+	margin-bottom:30px;
+}
+table tbody tr:first-child{
+	background-color: #F9F9F9;
+	border-bottom: 1px solid #c3c3c3;
+}
+table tbody tr td{
+	color:#000;
+}
+table:first-child tbody tr:first-child td:first-child{
+	border-left: 2px solid #F3168A;
+	font-size: 20px;
+	color: #F3168A;
+}
+table tbody tr td:not(:first-child){
+	text-align: center;
+}
+tr.detail{
+	border-bottom: 1px solid #ccc;
+}
+tr.detail p{
+	float:left;
+	padding:20px 10px;
+}
+tr.detail p:last-child{width:150px;margin-left:20px;}
+tr.detail td:first-child{width: 600px;}
+tr.detail td b{color: #F3168A;}
+tr.detail td a{text-decoration: none;}
+tr.detail td button{width:25px;height:25px;border:1px solid #ccc;box-shadow:none;outline:none;}
+tr.detail td span{
+	width:23px;height:22px;border:1px solid #ccc;
+	display:inline-block;
+}
+table tbody tr:last-child td{
+	padding:20px 0;
+}
+table tbody tr:last-child td span{
+	display: inline-block;
+	width:48px;height:28px;
+	color:#fff;
+	background-color: #FF9933;
+	text-align: center;
+	border: 1px solid #FF9933;
+	border-radius: 2px;
+	margin: 0 10px;
+}
+
+
+button.youhui{
+	margin-top: 15px;
+	margin-left:15px;
+	margin-bottom: 15px;
+	width:155px;height:40px;
+	color:#F3168A;
+	border: 1px solid #F3168A;
+	border-radius: 2px;
+}
+
+tbody tr td.price p{
+	text-align: right;
+	padding-right:30px;
+}
+tbody tr td.price span{color:#F3168A}
+tbody tr td.price p:last-child span{font-size: 20px;color: #F3168A;}
+
+tbody tr td.buy p{
+	text-align: right;
+}
+tbody tr td.buy button{
+	width:313px;height:64px;
+	background-color:#F3168A;
+	color:#fff;
+	text-align: center;
+	box-shadow:none;outline:none;
+	border:0;
+	font-size: 25px;
+}
+
+table tbody tr:last-child td{padding:0;}
+p.quality{text-align: center;width: 960px;margin: 0 auto;margin-top: 100px;}
